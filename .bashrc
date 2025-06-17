@@ -14,11 +14,12 @@ alias n='neofetch'
 
 #git 
 
-alias g=’git’
-alias st=’git status’
-alias com=’git commit -m’
-alias clone=’git clone’
-alias sth=’git stash’
-alias lg=’git log’
-alias u=’git add -u’
-alias all=’git add .’
+alias g='git'
+alias st='git status'
+alias com='git commit -m'
+alias clone='git clone'
+alias sth='git stash'
+alias lg='git log'
+alias u='git add -u'
+alias all='git add .'
+alias x='exit'
