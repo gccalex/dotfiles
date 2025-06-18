@@ -28,6 +28,7 @@ alias x='exit'
 NOTES_FILENAME="notes-$(date +%Y%m%d).md"
 alias nn="mkdir ~/notes &> /dev/null; touch ~/notes/$NOTES_FILENAME; cd ~/notes; micro ~/notes/$NOTES_FILENAME"
 
+
 #starship 
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init bash)"
