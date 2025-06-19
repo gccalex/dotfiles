@@ -34,3 +34,6 @@ alias nn="mkdir ~/notes &> /dev/null; touch ~/notes/$NOTES_FILENAME; cd ~/notes;
 #starship 
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init bash)"
+
+
+complete -cf sudo
