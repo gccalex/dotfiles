@@ -12,6 +12,8 @@ PS1='[\u@\h \W]\$ '
 alias c='clear'
 alias n='neofetch'
 alias ..='cd ..'
+alias h='htop'
+
 
 #git 
 alias g='git'
