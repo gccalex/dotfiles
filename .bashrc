@@ -14,21 +14,30 @@ alias n='neofetch'
 alias ..='cd ..'
 alias h='htop'
 alias m='micro'
+alias gcf='cd $HOME/.config'
+alias x='exit'
+alias bash='micro ~/.bashrc'
 
 #git 
-alias g='git'
-alias st='git status'
-alias com='git commit -m'
-alias clone='git clone'
-alias sth='git stash'
-alias lg='git log'
-alias u='git add -u'
-alias all='git add .'
-alias x='exit'
+# alias g='git'
+# alias st='git status'
+# alias com='git commit -m'
+# alias clone='git clone'
+# alias sth='git stash'
+# alias lg='git log'
+# alias u='git add -u'
+# alias all='git add .'
 
-#notes
+
+
+#notes for Dropbox
 NOTES_FILENAME="notes-$(date +%Y%m%d).md"
-alias nn="mkdir ~/notes &> /dev/null; touch ~/notes/$NOTES_FILENAME; cd ~/notes; micro ~/notes/$NOTES_FILENAME"
+alias nn="mkdir ~/Dropbox/notes &> /dev/null; touch ~/Dropbox/notes/$NOTES_FILENAME; cd ~/Dropbox/notes; micro ~/Dropbox/notes/$NOTES_FILENAME"
+
+
+#notes for home folder
+#NOTES_FILENAME="notes-$(date +%Y%m%d).md"
+#alias nn="mkdir ~/notes &> /dev/null; touch ~/notes/$NOTES_FILENAME; cd ~/notes; micro ~/notes/$NOTES_FILENAME"
 
 
 #BibleSearch
