@@ -17,6 +17,7 @@ alias m='micro'
 alias gcf='cd $HOME/.config'
 alias x='exit'
 alias bash='micro ~/.bashrc'
+alias nv="nvim"
 
 #git 
 # alias g='git'
@@ -32,7 +33,7 @@ alias bash='micro ~/.bashrc'
 
 #notes for Dropbox
 NOTES_FILENAME="notes-$(date +%Y%m%d).md"
-alias nn="mkdir ~/Dropbox/notes &> /dev/null; touch ~/Dropbox/notes/$NOTES_FILENAME; cd ~/Dropbox/notes; micro ~/Dropbox/notes/$NOTES_FILENAME"
+alias nn="mkdir ~/Dropbox/notes &> /dev/null; touch ~/Dropbox/notes/$NOTES_FILENAME; cd ~/Dropbox/notes; nvim ~/Dropbox/notes/$NOTES_FILENAME"
 
 
 #notes for home folder
@@ -123,9 +124,9 @@ ss() {
         --preview "$PREVIEW_CMD {1} --highlight-line {2}" \
         --delimiter : \
         --nth 3.. \
-        --bind 'enter:execute(micro +{2} {1})' \
+        --bind 'enter:execute(nvim +{2} {1})' \
         --header "Type to search with ripgrep. Enter to open in micro."
 }
 
 # Add a simple alias to quickly get to your dotfiles directory and use rgf
-alias dotfrg='cd ~/.dotfiles && rgf' # Adjust ~/.dotfiles to your actual dotfiles path
+# alias dotfrg='cd ~/.dotfiles && rgf' # Adjust ~/.dotfiles to your actual dotfiles path
