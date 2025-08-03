@@ -1,0 +1,36 @@
+return {
+  {
+    "IlyasYOY/obs.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    dev = true,
+    config = function()
+      local obs = require("obs")
+
+      obs.setup({
+        vault_home = "~/Dropbox/zettelkasten",
+        vault_name = "zettelkasten",
+        journal = {
+          template_name = "jornal",
+        },
+      })
+
+      -- vim.keymap.set("n", "<leader>nn", "<cmd>ObsNvimFollowLink<cr>")
+      -- vim.keymap.set("n", "<leader>nr", "<cmd>ObsNvimRandomNote<cr>")
+      vim.keymap.set("n", "<leader>on", "<cmd>ObsNvimNewNote<cr>")
+      vim.keymap.set("n", "<leader>oln", "<cmd>ObsNvimCopyObsidianLinkToNote<cr>")
+      -- vim.keymap.set("n", "<leader>no", "<cmd>ObsNvimOpenInObsidian<cr>")
+      vim.keymap.set("n", "<leader>od", "<cmd>ObsNvimDailyNote<cr>")
+      -- vim.keymap.set("n", "<leader>nw", "<cmd>ObsNvimWeeklyNote<cr>")
+      -- vim.keymap.set("n", "<leader>nrn", "<cmd>ObsNvimRename<cr>")
+      -- vim.keymap.set("n", "<leader>nT", "<cmd>ObsNvimTemplate<cr>")
+      -- vim.keymap.set("n", "<leader>nM", "<cmd>ObsNvimMove<cr>")
+      vim.keymap.set("n", "<leader>ob", "<cmd>ObsNvimBacklinks<cr>")
+      vim.keymap.set("n", "<leader>ofj", "<cmd>ObsNvimFindInJournal<cr>")
+      vim.keymap.set("n", "<leader>off", "<cmd>ObsNvimFindNote<cr>")
+      vim.keymap.set("n", "<leader>ofg", "<cmd>ObsNvimFindInNotes<cr>")
+    end,
+  },
+}
