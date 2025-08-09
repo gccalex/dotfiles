@@ -17,3 +17,15 @@ vim.keymap.set("n", "<leader>od", "<cmd>ObsidianDailies<CR>", { desc = "Obsidian
 --    vim.keymap.set("n", "<Tab>", "/\\(\\[\\[\\|\\[.\\{-}\\](\\)<CR>:nohlsearch<CR>", { buffer = true })
 --    vim.keymap.set("n", "<S-Tab>", "?\\(\\[\\[\\|\\[.\\{-}\\](\\)<CR>:nohlsearch<CR>", { buffer = true })
 --  end,
+-- Define the function
+local function output_to_new_buffer(cmd)
+  local output = vim.api.nvim_exec(cmd, true)
+  vim.cmd("new")
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, vim.split(output, "\n"))
+end
+
+-- Map a key to run `:version` and show it in a new buffer
+vim.keymap.set("n", "<leader>ov", function()
+  output_to_new_buffer("ObsidianBacklinks")
+end, { desc = "Output Backlinks to new buffer" })
+

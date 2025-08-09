@@ -31,6 +31,20 @@ return {
       },
     },
     ---------------
+    ---
+       backlinks = {
+    -- Disable Telescope picker
+    open_in_window = true,
+
+    -- Disable Telescope entirely for backlinks
+    telescope = nil, -- Disable Telescope integration for backlinks
+    open = function(uri)
+      local fname = vim.fn.fnamemodify(uri, ":p")
+      -- Open backlinks in a vertical split
+      vim.cmd("vsplit " .. vim.fn.fnameescape(fname))
+    end,
+  },
+    ---
     notes_subdir = "000 INBOX",
     -- Where to put new notes. Valid options are
     -- _ "current_dir" - put new notes in same directory as the current buffer.
@@ -80,6 +94,7 @@ return {
     -- 4. "vsplit_force" - always open a new vertical split if the file is not in the adjacent vsplit.
     -- 5. "hsplit_force" - always open a new horizontal split if the file is not in the adjacent hsplit.
     open_notes_in = "vsplit",
+    
 
     -- See https://github.com/obsidian-nvim/obsidian.nvim/wiki/Notes-on-configuration#statusline-component
     statusline = {
@@ -117,11 +132,13 @@ return {
     -- format = "({{backlinks}} backlinks)", -- limit to backlinks
     hl_group = "@property", -- Use another hl group
   },
-  -------------------------------------------------
+
+   -------------------------------------------------
   -- Optional, by default, `:ObsidianBacklinks` parses the header under
   -- the cursor. Setting to `false` will get the backlinks for the current
   -- note instead. Doesn't affect other link behaviour.
-  backlinks = {
-    parse_headers = false,
-  },
+ -- backlinks = {
+  --  parse_headers = true,
+   --  open_backlinks_in  = "vsplit",  -- vsplit|split|tabnew
+ -- },
 }

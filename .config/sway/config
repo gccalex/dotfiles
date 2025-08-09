@@ -47,8 +47,9 @@ output eDP-1 scale 1.1
 
 gaps inner 5
 # Add gaps in between all application windows:
-gaps outer 3
+gaps outer 2
 
+# capslock 
 # Set Fonts
 # font Roboto:size=11
 
@@ -288,6 +289,7 @@ input 2:7:SynPS/2_Synaptics_TouchPad {
 	input * {
 	    xkb_layout us,ru
 	    xkb_options grp:alt_shift_toggle
+    #  xkb_options caps:ctrl_modifier
 	}
 
 	# Список устройств: swaymsg -t get_inputs
