@@ -5,6 +5,7 @@ return {
   -- or if using mini.icons/mini.nvim
   -- dependencies = { "echasnovski/mini.icons" },
   opts = {},
+
   keys = {
     {
       "<leader>oo",
@@ -76,12 +77,5 @@ return {
     },
 
     -- :lua require('fzf-lua').grep({search='TODO|HACK|PERF|NOTE|FIX', no_esc=true})
-    {
-      "<leader>dw",
-      function()
-        require("fzf-lua").grep_cword({ cmd = "sdcv" })
-      end,
-      desc = "OPDICTIONARY in a WINDOW",
-    },
   },
 }
