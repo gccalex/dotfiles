@@ -34,6 +34,7 @@ alias nv="nvim"
 #notes for Dropbox
 NOTES_FILENAME="$(date +%F).md"
 alias nn="mkdir ~/Dropbox/zettelkasten/JORNAL &> /dev/null; touch ~/Dropbox/zettelkasten/JORNAL/$NOTES_FILENAME; cd ~/Dropbox/zettelkasten/JORNAL; nvim ~/Dropbox/zettelkasten/JORNAL/$NOTES_FILENAME"
+alias td="mkdir ~/Dropbox/zettelkasten/000_To_Do &> /dev/null; touch ~/Dropbox/zettelkasten/000_To_Do/00_To_Do.md; cd ~/Dropbox/zettelkasten/000_To_Do; nvim ~/Dropbox/zettelkasten/000_To_Do/00_To_Do.md"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"

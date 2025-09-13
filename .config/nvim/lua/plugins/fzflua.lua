@@ -77,5 +77,12 @@ return {
     },
 
     -- :lua require('fzf-lua').grep({search='TODO|HACK|PERF|NOTE|FIX', no_esc=true})
+    {
+      "<leader>dw",
+      function()
+        require("fzf-lua").grep_cword({ fzf_live("sdcv") })
+      end,
+      desc = "OPEN DICTIONARY in a WINDOW",
+    },
   },
 }

@@ -9,7 +9,12 @@ vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", { desc = "Show O
 vim.keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>", { desc = "ZenMode toggle" })
 vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Obsidian Quick Switch to notes" })
 vim.keymap.set("n", "<leader>od", "<cmd>ObsidianDailies<CR>", { desc = "Obsidian Daily notes" })
-
+vim.keymap.set(
+  "n",
+  "<leader>td",
+  "<cmd>:e ~/Dropbox/zettelkasten/000_To_Do/00_To_Do.md<CR>",
+  { desc = "Open ToDo file" }
+)
 --obsidian tab backlinks
 --vim.api.nvim_create_autocmd("FileType", {
 --  pattern = "markdown",
@@ -28,4 +33,3 @@ end
 vim.keymap.set("n", "<leader>ov", function()
   output_to_new_buffer("ObsidianBacklinks")
 end, { desc = "Output Backlinks to new buffer" })
-
