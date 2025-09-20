@@ -1,1 +1,1 @@
-/home/aleks/.config/omarchy/current/theme/neovim.lua
+/home/alex/.config/omarchy/current/theme/neovim.lua
